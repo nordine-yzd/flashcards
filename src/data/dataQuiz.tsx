@@ -25,12 +25,12 @@ const arrayQuestAnsw: MyTypeAnswerQuestion[] = [
   {
     id: 2,
     question: "Quelle est la plus grande ville du continent européen ? ",
-    answer: "620 muscles du corps humain",
+    answer: "Londres. ",
   },
   {
     id: 3,
     question: "Combien de muscles dans le corps humain ? ",
-    answer: "Lille",
+    answer: "620 muscles du corps humain",
   },
 ];
 

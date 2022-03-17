@@ -3,6 +3,7 @@ import React from "react";
 import "./styles/App.css";
 import { FlashCardMentale } from "./components/mental";
 import arrayQuestAnsw from "./data/dataQuiz";
+// import Example from "./components/input";
 // import { anecdotes } from "./data/dataQuiz";
 // import { ShowRandom } from "./components/mental";
 
@@ -13,7 +14,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <FlashCardMentale bdd={arrayQuestAnsw} />
-        {/* <ShowRandom rand={anecdotes} /> */}
+        {/* <ShowRandom bdd={arrayQuestAnsw} /> */}
+        {/* <Example /> */}
       </header>
     </div>
   );
