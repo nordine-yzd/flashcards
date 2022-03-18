@@ -1,6 +1,6 @@
 import React from "react";
 
-export type MyTypeAnswerQuestions = {
+type MyTypeAnswerQuestions = {
   id: number;
   question: string;
   answer: string;
@@ -32,6 +32,7 @@ type FlashcardMentalProps = {
 export function FlashCardMentale(props: FlashcardMentalProps): JSX.Element {
   let [count, setCount] = React.useState(true);
   let [selected, setSelected] = React.useState(0);
+  // let [inout, setInput] = React.useState("");
 
   if (count === true) {
     return (
@@ -62,6 +63,13 @@ export function FlashCardMentale(props: FlashcardMentalProps): JSX.Element {
         <button onClick={() => setCount((count = true))}>
           Other Questions
         </button>
+        {/* <form>
+          <label>
+            Name:
+            <input type="text" name="name" />
+          </label>
+          <input type="submit" value="Submit" onInput={()=> setInput} />
+        </form> */}
       </div>
     );
   }

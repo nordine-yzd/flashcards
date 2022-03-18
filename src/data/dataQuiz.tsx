@@ -5,6 +5,7 @@ export type MyTypeAnswerQuestion = {
   id: number;
   question: string;
   answer: string;
+  falseAnswer: string[];
 };
 
 // app.request(`https://videogame-api.fly.dev/games/${slug.id}`, (error, body) => {
@@ -20,17 +21,20 @@ const arrayQuestAnsw: MyTypeAnswerQuestion[] = [
   {
     id: 1,
     question: "Quel est le plus long fleuve du monde ? ",
-    answer: "Nil.",
+    answer: "Nil",
+    falseAnswer: ["Le robinet", "La piscine de Lille", "Nil", "Le Rhin"],
   },
   {
     id: 2,
     question: "Quelle est la plus grande ville du continent européen ? ",
-    answer: "Londres. ",
+    answer: "Londres",
+    falseAnswer: ["Lyon", "Amsterdam", "Madrid", "Londres"],
   },
   {
     id: 3,
-    question: "Combien de muscles dans le corps humain ? ",
-    answer: "620 muscles du corps humain",
+    question: "Comment s'appelle le president français ? ",
+    answer: "Nordine",
+    falseAnswer: ["Lepen", "Jadot", "Nordine", "Macron"],
   },
 ];
 
