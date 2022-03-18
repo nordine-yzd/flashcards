@@ -16,20 +16,20 @@ type FlashcardRadioProps = {
 export default function FlashCardRadio(
   props: FlashcardRadioProps
 ): JSX.Element {
-  let [count, setCount] = React.useState(true);
+  let [state, setstate] = React.useState(true);
   let [random, setRandom] = React.useState(0);
   let [checkedOne, setChekedOne] = React.useState("");
   console.log(checkedOne + " checkedone");
   console.log(random);
 
   function resetCheckedOne() {
-    console.log(checkedOne + " ds la fonction");
+    // console.log(checkedOne + " ds la fonction");
     checkedOne = "";
     setRandom(Math.floor(Math.random() * 3));
   }
 
   //affiche  les question reopnses
-  if (count === true) {
+  if (state === true) {
     return (
       <div className="App-header">
         {() => setRandom(Math.floor(Math.random() * 3))}
@@ -57,8 +57,8 @@ export default function FlashCardRadio(
           <button
             onClick={() =>
               checkedOne === ""
-                ? setCount((count = true))
-                : setCount((count = false))
+                ? setstate((state = true))
+                : setstate((state = false))
             }
           >
             confirm
@@ -92,7 +92,7 @@ export default function FlashCardRadio(
           </div>
         </div>
         <br />
-        <button onClick={() => setCount((count = true))}>
+        <button onClick={() => setstate((state = true))}>
           Other Questions
         </button>
       </div>
@@ -104,7 +104,7 @@ export default function FlashCardRadio(
       <div className="App-header-green">
         <p className="display-1">Correct answer was :</p> <br />
         <h1>{props.bdd[random].answer}</h1> <br />
-        <button onClick={() => setCount((count = true))}>
+        <button onClick={() => setstate((state = true))}>
           Other Questions
         </button>
       </div>
