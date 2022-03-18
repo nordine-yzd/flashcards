@@ -34,7 +34,7 @@ const arrayQuestAnsw: MyTypeAnswerQuestion[] = [
     id: 3,
     question: "Comment s'appelle le president français ? ",
     answer: "Nordine",
-    falseAnswer: ["Lepen", "Jadot", "Nordine", "Macron"],
+    falseAnswer: ["Melanchon", "Jadot", "Nordine", "Macron"],
   },
 ];
 
