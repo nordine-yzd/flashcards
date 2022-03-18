@@ -1,5 +1,4 @@
-// import express from "express";
-// const app = express();
+// import request from "@fewlines-education/request";
 
 export type MyTypeAnswerQuestion = {
   id: number;
@@ -8,13 +7,12 @@ export type MyTypeAnswerQuestion = {
   falseAnswer: string[];
 };
 
-// app.request(`https://videogame-api.fly.dev/games/${slug.id}`, (error, body) => {
+// request(`https://videogame-api.fly.dev/games/${slug.id}`, (error, body) => {
 //   if (error) {
 //     throw error;
 //   }
 //   const json = JSON.parse(body);
 //   // console.log(json);
-//   res.render("details_of_game.njk", { details: json });
 // });
 
 const arrayQuestAnsw: MyTypeAnswerQuestion[] = [
@@ -33,18 +31,26 @@ const arrayQuestAnsw: MyTypeAnswerQuestion[] = [
   {
     id: 3,
     question: "Comment s'appelle le president français ? ",
-    answer: "Nordine",
+    answer: "Macron",
     falseAnswer: ["Melanchon", "Jadot", "Nordine", "Macron"],
   },
+  {
+    id: 4,
+    question: "Qui a dessiné la statue de la liberté ?",
+    answer: "Gustave Eiffel",
+    falseAnswer: [
+      "Gustave Eiffel",
+      "Richard Nixon",
+      "Bill Clinton",
+      "Mister liberty",
+    ],
+  },
+  {
+    id: 5,
+    question: "Combien y a-t-il de quarts d’heure dans une journée ?",
+    answer: "96",
+    falseAnswer: ["96", "24", "162", "62"],
+  },
 ];
-
-// export const anecdotes = [
-//   "If it hurts, do it more often",
-//   "Adding manpower to a late software project makes it later!",
-//   "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
-//   "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-//   "Premature optimization is the root of all evil.",
-//   "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
-// ];
 
 export default arrayQuestAnsw;

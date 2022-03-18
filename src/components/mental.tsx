@@ -19,7 +19,7 @@ export function FlashCardMentale(props: FlashcardMentalProps): JSX.Element {
   //     <div>
   //       <div>
   //         <h1> {props.bdd[selected].question}</h1>
-  //         <button onClick={() => setSelected(Math.floor(Math.random() * 3))}>
+  //         <button onClick={() => setSelected(Math.floor(Math.random() *  props.bdd.length))}>
   //           Show Random
   //         </button>
   //         <button onClick={() => setstate((state = false))}>Answer</button>
@@ -41,7 +41,11 @@ export function FlashCardMentale(props: FlashcardMentalProps): JSX.Element {
       {state ? (
         <div>
           <h1> {props.bdd[selected].question}</h1>
-          <button onClick={() => setSelected(Math.floor(Math.random() * 3))}>
+          <button
+            onClick={() =>
+              setSelected(Math.floor(Math.random() * props.bdd.length))
+            }
+          >
             Show Random
           </button>
           <button onClick={() => setstate((state = false))}>Answer</button>
